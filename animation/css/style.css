@@ -1,0 +1,96 @@
+.gallery {
+	padding: 0;
+	display: flex;
+	margin: 60px 0;
+    justify-content: space-around;
+}
+.gallery .gallery-item {
+	list-style: none;
+	width: 25%;
+	padding: 15px;
+	position: relative;
+	/* アニメーションに関数プロパティ */
+	opacity: 0; 	/* フェードインしたいので最初は非表示 */
+	bottom: -15px; 	/* 下から上に移動したいので最初はマイナス値 */
+	transition: 1s; /* 1秒かけてアニメーション */
+}
+
+.gallery .gallery-item figure {
+	margin: 0;
+}
+.gallery .gallery-item img {
+	max-width: 100%;
+	height: auto;
+}
+.gallery .gallery-item figcaption {
+	font-size: 1vw;
+}
+
+/* スクロールした時に追加されるclass */
+.gallery .gallery-item.fadein {
+	opacity: 1;
+	bottom: 0;
+}
+
+
+
+  .wrap {
+    height: 200px;
+    position: relative;
+    display: flex;
+    align-items: center;
+    margin-bottom: 1rem;
+    }
+    .image {
+    width: 50%;
+    height: 200px;
+    background: #ccc;
+    margin: 0;
+    display: grid;
+    place-items: center center;
+    position: absolute;
+    top: 0;
+    right: 0;
+    }
+    .txt {
+    color: #fff;
+    background: #333;
+    padding: 20px;
+    flex-basis: 60%;
+    box-sizing: border-box;
+    z-index: 2;
+    }
+    .txt h1 {
+    font-size: 20px;
+    }
+    .txt p {
+    font-size: 14px;
+    }
+    
+
+    .secound-wrap {
+    display: flex;
+    justify-content: space-between;
+    }
+    .secound-box {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    flex-basis: 50%;
+    }
+    .secound-box a {
+    flex-basis: calc(100% - 20px);
+    color: #46a0a8;
+    background: #a0dde2;
+    padding: 20px 0;
+    text-decoration: none;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    }
+    .secound-box.small a {
+    flex-basis: calc(50% - 10px);
+    }
+    .secound-box.small a:nth-child(n+3) {
+    margin-top: 20px;
+    }
